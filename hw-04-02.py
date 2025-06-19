@@ -22,3 +22,4 @@ def get_cats_info(path):
         # Обробка винятку, якщо файл не знайдено
         print(f"Файл '{path}' не знайдено.")
         return None
+    
