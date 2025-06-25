@@ -20,11 +20,11 @@ def change_contact(args, contacts):
         contacts[name] = new_phone
         return f"Contact for {name} has been updated"
     else:
-        print("Contact doesn't exist")
+        return "Contact doesn't exist"
 
 # Функція для виводу номеру телефону контакта
 
-def show_number(args, contacts):
+def number(args, contacts):
     name = args[0]
     if name in contacts:
         return f"{name}: {contacts[name]}"
@@ -57,12 +57,12 @@ def main():
             print(add_contact(args, contacts))
         elif command == "change":
             print(change_contact(args, contacts))
-        elif command == "show":
-            print(show_number(args, contacts))
+        elif command == "number":
+            print(number(args, contacts))
         elif command == "all":
             print(show_all_contacts(contacts))
         else:
             print("Invalid command.")
 
-if name == "__main__":
+if __name__ == "__main__":
     main()
