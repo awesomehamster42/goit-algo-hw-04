@@ -32,12 +32,12 @@ def print_tree(path: Path, indent=''):
 
 
 # Основний блок, який виконується при запуску скрипта
-if name == '__main__':
+if __name__ == '__main__':
     try:
         directory_path = Path(sys.argv[1])
     except IndexError:
         print("Вкажіть шлях до директорії як аргумент при запуску.")
-        print("Приклад: python tree_view.py /шлях/до/директорії")
+        print("Приклад: python hw-04-03.py /шлях/до/директорії")
         sys.exit(1)
 
     print(f"Структура директорії: {directory_path}")
