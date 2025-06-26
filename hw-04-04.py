@@ -24,7 +24,7 @@ def change_contact(args, contacts):
 
 # Функція для виводу номеру телефону контакта
 
-def number(args, contacts):
+def phone(args, contacts):
     name = args[0]
     if name in contacts:
         return f"{name}: {contacts[name]}"
@@ -58,7 +58,7 @@ def main():
         elif command == "change":
             print(change_contact(args, contacts))
         elif command == "number":
-            print(number(args, contacts))
+            print(phone(args, contacts))
         elif command == "all":
             print(show_all_contacts(contacts))
         else:
